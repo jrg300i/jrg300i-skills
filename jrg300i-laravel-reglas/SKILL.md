@@ -1,5 +1,5 @@
 ---
-name: jrg-300i-laravel-reglas
+name: jrg300i-laravel-reglas
 description: Reglas Laravel del proyecto (MVC, migraciones I-P-R-A-T, Services, Requests, seguridad, Docker, rendimiento). Usar SIEMPRE al editar PHP, Blade, migraciones, rutas o tests Laravel.
 license: MIT
 metadata:
@@ -8,7 +8,7 @@ metadata:
   github: "jrg300i"
 ---
 
-# jrg-300i · Laravel Reglas
+# jrg300i · Laravel Reglas
 
 > **Creado por:** Ing. Jobran Rodriguez ([@jrg300i](https://github.com/jrg300i))
 
