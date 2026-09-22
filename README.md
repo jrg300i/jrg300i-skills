@@ -1,6 +1,6 @@
 # jrg-300i Skills
 
-> **Creado por:** Ing. Jobran Rodriguez ([@jrg-300i](https://github.com/jrg-300i))
+> **Creado por:** Ing. Jobran Rodriguez ([@jrg300i](https://github.com/jrg300i))
 
 Skills de agente AI para proyectos Laravel, basados en las reglas del proyecto.
 
@@ -13,21 +13,15 @@ Skills de agente AI para proyectos Laravel, basados en las reglas del proyecto.
 ## Instalación
 
 ```bash
-# Desde GitHub (tras publicar el repo como jrg-300i/jrg-300i-skills)
-npx skills add jrg-300i/jrg-300i-skills
+npx skills add jrg300i/jrg-300i-skills
 
 # Solo este skill
-npx skills add jrg-300i/jrg-300i-skills --skill jrg-300i-laravel-reglas
-
-# Local (este repo)
-npx skills add ./skills -a opencode -y
+npx skills add jrg300i/jrg-300i-skills --skill jrg-300i-laravel-reglas
 ```
 
-## Publicar en skills.sh
+## Autor
 
-1. Crear repo público `jrg-300i/jrg-300i-skills` en GitHub
-2. Subir esta carpeta `skills/` + un `README.md` en la raíz
-3. Quien instale con `npx skills add jrg-300i/jrg-300i-skills` aparece en el leaderboard de [skills.sh](https://skills.sh)
+**Ing. Jobran Rodriguez** — [github.com/jrg300i](https://github.com/jrg300i)
 
 ## Licencia
 

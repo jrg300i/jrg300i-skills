@@ -5,12 +5,12 @@ license: MIT
 metadata:
   author: "Ing. Jobran Rodriguez"
   version: "1.0.0"
-  github: "jrg-300i"
+  github: "jrg300i"
 ---
 
 # jrg-300i · Laravel Reglas
 
-> **Creado por:** Ing. Jobran Rodriguez ([@jrg-300i](https://github.com/jrg-300i))
+> **Creado por:** Ing. Jobran Rodriguez ([@jrg300i](https://github.com/jrg300i))
 
 Guía de construcción de proyectos Laravel: eficiente, escalable, mantenible y reutilizable. Todo cambio al proyecto debe quedar registrado en `ultimosCambios.md` si existe.
 
