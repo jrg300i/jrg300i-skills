@@ -29,6 +29,7 @@
 19. [Auditoría de acciones de usuarios](#19-auditoría-de-acciones-de-usuarios)
 20. [Despliegue en Docker (generalizado)](#20-despliegue-en-docker-generalizado)
 21. [Buenas prácticas de código: 6 reglas de calidad](#21-buenas-prácticas-de-código-6-reglas-de-calidad)
+22. [Documentación de módulos: resumen a nivel de código](#22-documentación-de-módulos-resumen-a-nivel-de-código)
 
 ---
 
@@ -1317,3 +1318,35 @@ Automatiza la ejecución de tus pruebas y revisiones en cada despliegue:
 - Mantener versionado el pipeline (`.github/workflows/*.yml`).
 
 ↳ **Resultado:** detección temprana de defectos y mayor confianza en cada entrega.
+---
+
+## 22. Documentación de módulos: resumen a nivel de código
+
+> **Regla obligatoria:** todo módulo nuevo o modificado DEBE quedar documentado en `reglas.md` (o en el doc del módulo) con un **resumen a nivel de código**: qué cambió y cómo funciona cada archivo, **detallado pero a la vez lo más resumido posible** (sin párrafos redundantes; una idea por línea).
+
+Plantilla mínima por módulo (ejemplo: `mensajes_memos`):
+
+```markdown
+### Módulo: mensajes_memos
+
+**Qué se modificó / creó**
+- Migración `xxxx_add_x_a_mensajes`: columna `x` (boolean, default false) + índice.
+- `Mensaje.php`: fillable/cast de `x`, scope `visiblesPara($userId)`.
+- `MensajeController.php`: `index()` filtra por visibilidad; `store()` persiste `x`.
+- `resources/views/mensajes/…`: switch en create/edit, badge en show.
+- `routes/web.php`: `PATCH /mensajes/{id}/x`.
+
+**Cómo funciona (flujo en 3-5 líneas)**
+1. Al crear, el Request valida `x => boolean` y el controlador lo persiste.
+2. `visiblesPara` aplica `x = true OR user_id = auth()->id()` en cada listado.
+3. En `show`, si no es visible: invitado → redirect login; logueado ajeno → 403.
+4. Auditoría registra el cambio de visibilidad.
+
+**Verificación**: comandos o checks usados (curl, route:list, tests).
+```
+
+Reglas de aplicación:
+- **Un bloque por módulo**, al final del documento o en el archivo del módulo; nunca disperso.
+- **Resumir al máximo sin perder detalle operativo**: nombres reales de archivos/rutas/columnas, no generalidades.
+- Si el módulo se toca en otra iteración, **actualizar su bloque** en la misma edición (nada de documentación desactualizada).
+- Los 3 copias de `reglas.md` (raíz, `skills/…/references/`, `.agents/skills/…/references/`) deben mantenerse **idénticas**.
