@@ -4,7 +4,7 @@ description: Reglas Laravel del proyecto (MVC, migraciones I-P-R-A-T, Services, 
 license: MIT
 metadata:
   author: "Ing. Jobran Rodriguez"
-  version: "1.0.0"
+  version: "1.1.0"
   github: "jrg300i"
 ---
 
@@ -22,8 +22,8 @@ Guía de construcción de proyectos Laravel: eficiente, escalable, mantenible y 
 
 ## Instrucciones
 
-1. Lee `references/reglas.md` (índice completo, 21 secciones).
-2. Antes de editar, comprueba qué patrón ya usa el códigobase (consistencia primero).
+1. Lee `references/reglas.md` (índice completo, 22 secciones).
+2. Antes de editar, comprueba qué patrón ya usa el código base (consistencia primero).
 3. Aplica la sección relevante al cambio que vas a hacer:
    - Migraciones → orden **I, P, R, A, T** + índices
    - Controladores delgados; lógica en `app/Services/`

@@ -1349,4 +1349,4 @@ Reglas de aplicación:
 - **Un bloque por módulo**, al final del documento o en el archivo del módulo; nunca disperso.
 - **Resumir al máximo sin perder detalle operativo**: nombres reales de archivos/rutas/columnas, no generalidades.
 - Si el módulo se toca en otra iteración, **actualizar su bloque** en la misma edición (nada de documentación desactualizada).
-- Los 3 copias de `reglas.md` (raíz, `skills/…/references/`, `.agents/skills/…/references/`) deben mantenerse **idénticas**.
+- **Fuente única**: `skills/jrg300i-laravel-reglas/references/reglas.md` es la única copia de `reglas.md` en el repo; las instalaciones locales (`.agents/skills/…`) se actualizan re-ejecutando `npx skills add`.
